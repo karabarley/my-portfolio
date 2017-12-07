@@ -1,0 +1,19 @@
+@import 'partials/setup';
+@import 'partials/variables';
+
+.container {
+	max-width: 900px;
+	margin: 0 auto;
+}
+
+body {
+	background: white;
+}
+
+h1{
+	color: blue;
+}
+
+.html{
+	width: 50px;
+}
