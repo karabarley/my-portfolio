@@ -1,0 +1,120 @@
+#portfolio{
+  padding: 200px 0px;
+  background: #feffff;
+  color:$textColor;
+  h2{
+    text-align: right;
+    margin-top: 0;
+  }
+}
+
+#portfolio{
+  img{
+    max-width:100%;
+  }
+}
+
+.portfolio__project--project1,
+.portfolio__project--project2,
+.portfolio__project--project3,
+.portfolio__project--project4
+{
+  @include parent-flex-row;
+  align-content: space-between;
+  margin-top: 100px;
+  .portfolio__details{
+    h3{
+      margin-top: 35px;
+    }
+    ul.portfolio__details--technologies{
+      margin-top: 50px;
+    }
+    ul.portfolio__details--links{
+    @include parent-flex-row;
+    margin-top: 50px;
+      a{
+        color: $primaryColor;
+        // color:$textColor;
+        font-weight: bold;
+        text-transform: uppercase;      
+        padding: 25px;
+  
+      }
+      // a:hover{
+      //   color: $primaryColor;
+      // }
+    }
+  }
+}
+
+
+.portfolio__project--project2,
+.portfolio__project--project4{
+  text-align: right;
+  ul.portfolio__details--links,
+  ul.portfolio__details--technologies{
+    justify-content: flex-end;
+  }
+}
+
+.portfolio__device,
+.portfolio__details{
+  width: 50%;
+  margin-bottom: 5%;
+}
+
+.portfolio__project--project1,
+.portfolio__project--project3{
+  .portfolio__details{
+    padding-left: 4%;
+     ul.portfolio__details--technologies li{
+       margin-right: 20px;
+       margin-left: 0px;
+     }
+  }
+}
+.portfolio__project--project1,
+.portfolio__project--project3{
+  .portfolio__device{
+    justify-content: center;
+        padding-right: 4%;
+  }
+}
+
+.portfolio__project--project2,
+.portfolio__project--project4{
+  .portfolio__details{
+    padding-right: 4%;
+    ul.portfolio__details--technologies li{
+      margin-left: 20px;
+      margin-right: 0px;
+    }
+  }
+}
+.portfolio__project--project2,
+.portfolio__project--project4{
+  .portfolio__device{
+    justify-content: center;
+        padding-left: 4%;
+  }
+}
+
+.portfolio__details{
+  p{
+    margin:25px 0px;
+  }
+  ul.portfolio__details--technologies{
+    @include parent-flex-row;
+    align-content: space-between;
+  }
+  ul.portfolio__details--technologies li{
+    padding: 25px 0px;
+    width: 150px;
+    text-align: center;
+    margin-right: 20px;
+    border-radius: 50px;
+    // box-shadow: 2px 5px 25px 0px rgb(240, 239, 239); 
+    border: 1px solid rgb(240, 239, 239);
+  }
+
+}

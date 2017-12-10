@@ -1,0 +1,12 @@
+#brand{
+  padding: 50px 0;
+  // background: $primaryColorLight;
+  background: $bgColorLight;
+  ul{
+    @include parent-flex-row;
+    justify-content: space-between;
+    img{
+      width: 150px;
+    }
+  }
+}

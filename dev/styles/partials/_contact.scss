@@ -1,0 +1,48 @@
+#contact{
+  padding: 175px 0px;
+  color:#455a64;
+  background: $bgColorBase;
+}
+
+#contact .wrapper{
+  @include parent-flex-row;
+  .contact__info{
+    width:50%;
+    padding-right: 4%;
+  
+    h2{
+      margin-bottom: 40px;
+    }
+    p{
+      margin: 25px 0px;
+      line-height: 2;
+    }
+    h4{
+      margin-top: 30px;
+    }
+  }
+  .form{
+    width: 50%;
+    padding-left: 4%;
+    input,
+    textarea{
+      display: block;
+      margin-bottom: 25px;
+      border: 1px solid rgb(240, 239, 239);
+      width: 100%;
+      padding: 20px;
+      border-radius: 10px;
+    }
+  }
+}
+
+#contact .contact__social{
+  @include parent-flex-row;
+    li{
+    padding-right: 40px;
+    i{
+      color: $textColor;
+      font-size: 2rem;
+    }
+}
+}

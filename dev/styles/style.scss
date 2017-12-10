@@ -1,19 +1,145 @@
 @import 'partials/setup';
 @import 'partials/variables';
+@import 'partials/header';
+@import 'partials/about';
+@import 'partials/portfolio';
+@import 'partials/skills';
+@import 'partials/contact';
+@import 'partials/brand';
+@import 'partials/footer';
 
-.container {
-	max-width: 900px;
-	margin: 0 auto;
+* {
+		margin: 0;
+		padding: 0;
+		border: 0;
+		outline: 0;
+		font-size: 100%;
+		vertical-align: baseline;
+		background: transparent;
+    }
+
+html{
+	font-family: $baseFont;
 }
 
 body {
 	background: white;
+
+}
+
+.wrapper{
+	width: 70%;
+	margin: 0 auto;
+	position:relative;
+	left:0%;
+	margin-top: -0px;
+}
+
+#about{
+	left:0%;
+}
+
+ul.menu {
+	background: $primaryColor;
+	position: fixed;
+	z-index: 2;
+	width: 30%; 
+	right: -30%; 
+	top: 0;
+	height: 100%;
+	transition: all 0.5s;
+	li{
+		margin-bottom: 15%;
+		padding-right: 10%;
+	}
+}
+input#toggle-menu:checked + ul.menu {
+	right: 0%;
+
+}
+input#toggle-menu{
+	display: none;
+}
+input#toggle-menu:checked ~ .container {
+	opacity: 0.5;
+}
+
+button.close__button{
+	box-shadow: 0 0 0 0;
+}
+
+.menu {
+	button{
+		margin-top: 10%;
+		width: 200px;
+		margin-left: 10%;
+		background:white;
+		color:$textColor;
+			i, 
+			h5{ 
+			display: inline-block;
+		}
+			i{ 
+			padding-right: 10px;
+		}
+	}
+	a h3{
+		color:white;
+		text-align: right;
+	}
+
+}
+
+button{
+	padding: 10px;
+	height:75px;
+	width: 250px;
+	border-radius: 50px ;
+}
+
+
+ul{
+	list-style-type: none;
+	padding:0;
+}
+
+a{
+	text-decoration: none;
 }
 
 h1{
-	color: blue;
+	color: $primaryColor;
+	font-size: 5rem;
 }
 
-.html{
+h2{
+	font-size: 3.5rem;
+	color:$textColor;	
+}
+h3{
+	font-size: 2rem;
+}
+h4{
+	font-size: 1.7rem;
+}
+
+h5{
+	text-transform: uppercase;
+}
+
+p{
+	color:$textColor;	
+	font-size: 17px;
+	line-height: 2;
+}
+
+.skills__svg{
+	width: 100px;
+}
+.skills__svg--firebase{
+	width: 150px;
+}
+.portfolio__details--git{
 	width: 50px;
 }
+

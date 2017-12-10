@@ -1,0 +1,25 @@
+//colors
+$primaryColor: #92b2f2;
+$primaryColorLight: #d4def3;
+
+//text colors
+$textColor: #455a64; 
+
+//background colors
+$bgColorBase: #feffff;
+$bgColorLight: #f5f8fb;
+$bgColor: #f4f8fe;
+$bgColorDarkest: #313b50;
+
+//fonts
+$baseFont: 'Montserrat', sans-serif;
+
+@mixin parent-flex-row{
+  display: flex;
+  flex-direction: row;
+}
+
+@mixin parent-flex-column{
+  display: flex;
+  flex-direction: column;
+}

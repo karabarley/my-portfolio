@@ -1,0 +1,77 @@
+#skills{
+  padding: 125px 0 100px 0;
+  text-align: center;
+  h2{
+    margin-bottom: 50px;
+  }
+  .skills__container{
+    position:relative;
+    @include parent-flex-row;
+    flex-wrap: wrap;
+    figure{
+      width: 20%;
+      padding: 5%;
+      border-radius: 25px;
+      transition: all 0.2s;
+      
+    }
+    figure:hover{
+       box-shadow: 2px 5px 25px 0px rgb(240, 239, 239);     
+    }
+  }
+}
+
+
+#skills figure .skills__svg--js,
+#skills figure .skills__svg--jquery,
+#skills figure .skills__svg--react,
+#skills figure .skills__svg--git,
+#skills figure .skills__svg--github,
+#skills figure .skills__svg--html,
+#skills figure .skills__svg--css3,
+#skills figure .skills__svg--sass,
+#skills figure .skills__svg--gulp,
+#skills figure .skills__svg--firebase
+
+{
+  z-index: 1;
+  transition: all 0.3s;
+}
+#skills figure .skills__svg--jsColor,
+#skills figure .skills__svg--jqueryColor,
+#skills figure .skills__svg--reactColor,
+#skills figure .skills__svg--gitColor,
+#skills figure .skills__svg--githubColor,
+#skills figure .skills__svg--htmlColor,
+#skills figure .skills__svg--css3Color,
+#skills figure .skills__svg--sassColor,
+#skills figure .skills__svg--gulpColor,
+#skills figure .skills__svg--firebaseColor{
+  display: none;
+  transition: all 0.3s;
+}
+
+#skills figure:hover .skills__svg--js,
+#skills figure:hover .skills__svg--jquery,
+#skills figure:hover .skills__svg--react,
+#skills figure:hover .skills__svg--git,
+#skills figure:hover .skills__svg--github,
+#skills figure:hover .skills__svg--html,
+#skills figure:hover .skills__svg--css3,
+#skills figure:hover .skills__svg--sass,
+#skills figure:hover .skills__svg--gulp,
+#skills figure:hover .skills__svg--firebase{
+  display: none;
+}
+#skills figure:hover .skills__svg--jsColor,
+#skills figure:hover .skills__svg--jqueryColor,
+#skills figure:hover .skills__svg--reactColor,
+#skills figure:hover .skills__svg--gitColor,
+#skills figure:hover .skills__svg--githubColor,
+#skills figure:hover .skills__svg--htmlColor,
+#skills figure:hover .skills__svg--css3Color,
+#skills figure:hover .skills__svg--sassColor,
+#skills figure:hover .skills__svg--gulpColor,
+#skills figure:hover .skills__svg--firebaseColor{
+  display: inline-block;
+}
