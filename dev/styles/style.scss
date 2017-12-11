@@ -7,6 +7,8 @@
 @import 'partials/contact';
 @import 'partials/brand';
 @import 'partials/footer';
+@import 'partials/responsive';
+
 
 * {
 		margin: 0;
@@ -23,7 +25,7 @@ html{
 }
 
 body {
-	background: white;
+	background: $bgColorBase;
 
 }
 
@@ -38,7 +40,7 @@ body {
 #about{
 	left:0%;
 }
-
+// Slide-in menu
 ul.menu {
 	background: $primaryColor;
 	position: fixed;
@@ -66,34 +68,43 @@ input#toggle-menu:checked ~ .container {
 
 button.close__button{
 	box-shadow: 0 0 0 0;
+	width: 150px;
 }
 
 .menu {
 	button{
-		margin-top: 10%;
-		width: 200px;
+		margin-top: 40px;
+		width: 150px;
 		margin-left: 10%;
 		background:white;
 		color:$textColor;
 			i, 
 			h5{ 
 			display: inline-block;
+				outline: none;
+			
 		}
 			i{ 
 			padding-right: 10px;
+			
 		}
+			
 	}
 	a h3{
 		color:white;
 		text-align: right;
+		transition: all 0.2s;
+	}
+	h3:hover{
+			transform: scale(1.1);
 	}
 
 }
 
 button{
 	padding: 10px;
-	height:75px;
-	width: 250px;
+	height:60px;
+	width: 200px;
 	border-radius: 50px ;
 }
 
@@ -109,15 +120,15 @@ a{
 
 h1{
 	color: $primaryColor;
-	font-size: 5rem;
+	font-size: 3.75rem;
 }
 
 h2{
-	font-size: 3.5rem;
+	font-size: 3rem;
 	color:$textColor;	
 }
 h3{
-	font-size: 2rem;
+	font-size: 1.7rem;
 }
 h4{
 	font-size: 1.7rem;
@@ -129,17 +140,7 @@ h5{
 
 p{
 	color:$textColor;	
-	font-size: 17px;
+	font-size: 14px;
 	line-height: 2;
-}
-
-.skills__svg{
-	width: 100px;
-}
-.skills__svg--firebase{
-	width: 150px;
-}
-.portfolio__details--git{
-	width: 50px;
 }
 

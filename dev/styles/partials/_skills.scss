@@ -1,4 +1,5 @@
 #skills{
+  background: $bgColorLight;
   padding: 125px 0 100px 0;
   text-align: center;
   h2{
@@ -21,6 +22,13 @@
   }
 }
 
+.skills__svg--firebase,
+.skills__svg--firebaseColor
+{
+  max-width: 100%;
+}
+
+
 
 #skills figure .skills__svg--js,
 #skills figure .skills__svg--jquery,
@@ -32,7 +40,6 @@
 #skills figure .skills__svg--sass,
 #skills figure .skills__svg--gulp,
 #skills figure .skills__svg--firebase
-
 {
   z-index: 1;
   transition: all 0.3s;

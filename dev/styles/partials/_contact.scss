@@ -1,5 +1,5 @@
 #contact{
-  padding: 175px 0px;
+  padding: 150px 0px;
   color:#455a64;
   background: $bgColorBase;
 }
@@ -7,14 +7,14 @@
 #contact .wrapper{
   @include parent-flex-row;
   .contact__info{
-    width:50%;
-    padding-right: 4%;
-  
+      width:50%;
+      padding-right: 4%;
     h2{
-      margin-bottom: 40px;
+      margin-bottom: -10px;
     }
     p{
       margin: 25px 0px;
+      margin-top:5;
       line-height: 2;
     }
     h4{
@@ -22,16 +22,28 @@
     }
   }
   .form{
-    width: 50%;
-    padding-left: 4%;
+      width: 50%;
+      padding-left: 4%;
     input,
     textarea{
+      font-size: 14px;
       display: block;
       margin-bottom: 25px;
       border: 1px solid rgb(240, 239, 239);
       width: 100%;
-      padding: 20px;
+      padding: 12px;
       border-radius: 10px;
+    }
+    input:active,
+    textarea:active,
+    input:focus,
+    textarea:focus{
+      border: 1px solid $primaryColor;
+      color: $primaryColor;
+      box-shadow: 1px solid rgb(240, 239, 239);
+    }
+    button {
+      color: $primaryColor;
     }
   }
 }
@@ -43,6 +55,11 @@
     i{
       color: $textColor;
       font-size: 2rem;
+      transition:all 0.2s;
+    }
+    i:hover{
+      color: $primaryColor;
+      transform: scale(1.1)
     }
 }
 }

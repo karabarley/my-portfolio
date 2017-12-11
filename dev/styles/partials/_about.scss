@@ -1,14 +1,29 @@
 #about{
-  
   background: $bgColorLight;
-  padding: 100px 0px;
+  padding: 70px 0px;
+  .wrapper{
+    @include parent-flex-row;
+  }
   h2{
     margin-top: 0;
   }
 }
 
 .about__info{
-  width: 50%;
+  width: 57%;
   line-height: 2;
   text-align: left;
+}
+
+#about figure{
+  width:30%;
+  margin: auto;
+  img{
+    text-align: center;
+    margin: 0 25%;
+    border-radius: 50%;
+    max-width: 100%;
+    box-shadow: 2px 5px 25px 0px rgb(240, 239, 239);   
+    border: 5px solid white; 
+  }
 }

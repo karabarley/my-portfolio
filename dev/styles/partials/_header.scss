@@ -1,5 +1,5 @@
 header{
-  padding-bottom:175px;
+  padding-bottom:205px;
 }
 header{
   background: $bgColorBase;
@@ -14,9 +14,9 @@ header{
   }
   .menu__button{
     background: $primaryColor;
-    width: 200px;
+    width: 150px;
     position: fixed;
-    top:5%;
+    top:40px;
     right:15%;
     z-index: 1;
     box-shadow: 0 0 0 0;
@@ -33,7 +33,7 @@ header{
 }
 
 h1{
-  margin-top: 275px;  
+  margin-top: 150px;  
 
 }
 
@@ -47,8 +47,8 @@ button{
 }
 
 .header__nav{
-  margin-right: 200px;
-  padding-top: 50px;
+  margin-right: 50px;
+  padding-top: 40px;
 }
 ul.header__social{
   margin-right: 150px;
@@ -59,7 +59,15 @@ ul.header__social{
     i{
       color: $textColor;
       font-size: 2rem;
+      transition:all 0.2s;
+    }
+    i:hover{
+      color: $primaryColor;
+      transform: scale(1.1)
     }
   }
+}
+ul#menu__social{
+ display: none;
 }
 
