@@ -5,8 +5,8 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Kara Barleta</title>
-	
-	<link rel="shortcut icon" type="image/png" href="../../dev/styles/images/favicon.png" />
+	<!-- favicon -->
+	<link rel="shortcut icon" type="image/png" href="public/styles/images/favicon.png" />
 	<!-- google font -->
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:300,600,800" >
 	<!-- font awesome -->
@@ -14,7 +14,7 @@
 	<!-- off canvas -->
 	<link rel="stylesheet" href="https://npmcdn.com/js-offcanvas@1.0/dist/_css/minified/js-offcanvas.css">
 	<!-- stylesheet-->
-	<link rel="stylesheet" href="public/styles/style.css">
+	<link rel="stylesheet" href="./public/styles/style.css">
 </head>
 <body>
 <!-- HEADER -->
@@ -85,7 +85,7 @@
 				<!-- This nav will sit at the top of the page. A button will be used as a hamburger menu -->
 		<header id="home" class="container" >	
 			
-			<div class="wrapper">
+			<!-- <div class="wrapper"> -->
 				<nav class="header__nav">					
 					<ul class="header__social">
 						<li>
@@ -120,16 +120,22 @@
 					</button>
 				</nav>
 				<!-- Introduction text  -->
-				<h1>hi, i'm kara.
-				<br />
-				a front-end developer.
-				</h1>
-				<button class="header__button--scroll">
-					<a href="#contact">
-						<i class="fa fa-arrow-circle-down" aria-hidden="true"></i>
-						<h5> scroll down</h5>
-					</a>
-				</button>
+				<div id="particles-border">
+					<div id="particles-js"></div>
+				</div>
+					<div id="header__intro">
+						<h1>hi, i'm kara.
+							<br /> a front-end developer.
+						</h1>
+						<button class="header__button--scroll">
+							<a href="#contact">
+								<i class="fa fa-arrow-circle-down" aria-hidden="true"></i>
+								<h5> scroll down</h5>
+							</a>
+						</button>
+					</div>
+				</div>	
+
 		</header>
 <!-- ABOUT ME-->
 		<section id="about" class="container">
@@ -144,198 +150,157 @@
 
 				</div>
 				<figure>
-					<img src="../../dev/styles/images/square.jpg" alt="Portrait of Kara Barleta">
+					<img src="public/styles/images/square.jpg" alt="Portrait of Kara Barleta">
 				</figure>
 			</div>
 		</section>
 <!-- MY PORTFOLIO-->
 		<section id="portfolio" class="container">
+			<h2>Portfolio</h2>
 			<div class="wrapper">
-				<h2>Portfolio</h2>
 				<!-- Project 1: What's the Haps? -->
 				<div class="portfolio__project--project1">
 					<div class="portfolio__device">
-						<fiure>
-							<img src="../../dev/styles/images/apple-mac-haps.png" alt="Mac desktop with project 1 as background">
-						</fiure>
+						<figure>
+							<img src="public/styles/images/laptop-haps.jpg" alt="Mac desktop with project 1 as background">
+							<figcaption>
+									<a href="https://what-s-the-haps.firebaseapp.com">
+										<i class="fa fa-external-link" aria-hidden="true"></i>
+										<h5>View Live</h5>
+									</a>
+							</figcaption>
+						</figure>
 					</div>
 					<div class="portfolio__details">
 						<h3>What's the Haps?</h3>
-						<p>A fully responsive web application using React JS, Firebase and the Ticketmaster API to create discussion threads based on events happening around your area</p>
+						<p>A fully responsive web application built using React JS, Firebase and the Ticketmaster API to create discussion pages based on events happening around your area</p>
 						<ul class="portfolio__details--technologies">
-							<li>React JS</li>
-							<li>Firebase</li>
-							<li>SASS</li>
-						</ul>
-						<ul class="portfolio__details--links">
+							<li>React JS &nbsp; |</li>
+							<li>Firebase&nbsp; |</li>
+							<li>SASS&nbsp; |</li>
 							<li>
-								<a href=""><h5>View Live</h5></a>
-							</li>
-							<li>
-								<div class="portfolio__details--container">
-									<a href="https://github.com/karabarley/Event-Meetup" >
-									<!-- Git SVG-->
-										<svg class="portfolio__details--git" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
-										<g fill="#455a64">
-										<path fill-rule="evenodd" clip-rule="evenodd" d="M64 5.103c-33.347 0-60.388 27.035-60.388 60.388 0 26.682 17.303 49.317 41.297 57.303 3.017.56 4.125-1.31 4.125-2.905 0-1.44-.056-6.197-.082-11.243-16.8 3.653-20.345-7.125-20.345-7.125-2.747-6.98-6.705-8.836-6.705-8.836-5.48-3.748.413-3.67.413-3.67 6.063.425 9.257 6.223 9.257 6.223 5.386 9.23 14.127 6.562 17.573 5.02.542-3.903 2.107-6.568 3.834-8.076-13.413-1.525-27.514-6.704-27.514-29.843 0-6.593 2.36-11.98 6.223-16.21-.628-1.52-2.695-7.662.584-15.98 0 0 5.07-1.623 16.61 6.19C53.7 35 58.867 34.327 64 34.304c5.13.023 10.3.694 15.127 2.033 11.526-7.813 16.59-6.19 16.59-6.19 3.287 8.317 1.22 14.46.593 15.98 3.872 4.23 6.215 9.617 6.215 16.21 0 23.194-14.127 28.3-27.574 29.796 2.167 1.874 4.097 5.55 4.097 11.183 0 8.08-.07 14.583-.07 16.572 0 1.607 1.088 3.49 4.148 2.897 23.98-7.994 41.263-30.622 41.263-57.294C124.388 32.14 97.35 5.104 64 5.104z"
-										/>
-										<path d="M26.484 91.806c-.133.3-.605.39-1.035.185-.44-.196-.685-.605-.543-.906.13-.31.603-.395 1.04-.188.44.197.69.61.537.91zm-.743-.55M28.93 94.535c-.287.267-.85.143-1.232-.28-.396-.42-.47-.983-.177-1.254.298-.266.844-.14 1.24.28.394.426.472.984.17 1.255zm-.575-.618M31.312 98.012c-.37.258-.976.017-1.35-.52-.37-.538-.37-1.183.01-1.44.373-.258.97-.025 1.35.507.368.545.368 1.19-.01 1.452zm0 0M34.573 101.373c-.33.365-1.036.267-1.552-.23-.527-.487-.674-1.18-.343-1.544.336-.366 1.045-.264 1.564.23.527.486.686 1.18.333 1.543zm0 0M39.073 103.324c-.147.473-.825.688-1.51.486-.683-.207-1.13-.76-.99-1.238.14-.477.823-.7 1.512-.485.683.206 1.13.756.988 1.237zm0 0M44.016 103.685c.017.498-.563.91-1.28.92-.723.017-1.308-.387-1.315-.877 0-.503.568-.91 1.29-.924.717-.013 1.306.387 1.306.88zm0 0M48.614 102.903c.086.485-.413.984-1.126 1.117-.7.13-1.35-.172-1.44-.653-.086-.498.422-.997 1.122-1.126.714-.123 1.354.17 1.444.663zm0 0"
-										/>
-									</g>
-									</svg>
-									<svg class="portfolio__details--gitColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
-										<g fill="#92b2f2">
-											<path fill-rule="evenodd" clip-rule="evenodd" d="M64 5.103c-33.347 0-60.388 27.035-60.388 60.388 0 26.682 17.303 49.317 41.297 57.303 3.017.56 4.125-1.31 4.125-2.905 0-1.44-.056-6.197-.082-11.243-16.8 3.653-20.345-7.125-20.345-7.125-2.747-6.98-6.705-8.836-6.705-8.836-5.48-3.748.413-3.67.413-3.67 6.063.425 9.257 6.223 9.257 6.223 5.386 9.23 14.127 6.562 17.573 5.02.542-3.903 2.107-6.568 3.834-8.076-13.413-1.525-27.514-6.704-27.514-29.843 0-6.593 2.36-11.98 6.223-16.21-.628-1.52-2.695-7.662.584-15.98 0 0 5.07-1.623 16.61 6.19C53.7 35 58.867 34.327 64 34.304c5.13.023 10.3.694 15.127 2.033 11.526-7.813 16.59-6.19 16.59-6.19 3.287 8.317 1.22 14.46.593 15.98 3.872 4.23 6.215 9.617 6.215 16.21 0 23.194-14.127 28.3-27.574 29.796 2.167 1.874 4.097 5.55 4.097 11.183 0 8.08-.07 14.583-.07 16.572 0 1.607 1.088 3.49 4.148 2.897 23.98-7.994 41.263-30.622 41.263-57.294C124.388 32.14 97.35 5.104 64 5.104z"
-											/>
-											<path d="M26.484 91.806c-.133.3-.605.39-1.035.185-.44-.196-.685-.605-.543-.906.13-.31.603-.395 1.04-.188.44.197.69.61.537.91zm-.743-.55M28.93 94.535c-.287.267-.85.143-1.232-.28-.396-.42-.47-.983-.177-1.254.298-.266.844-.14 1.24.28.394.426.472.984.17 1.255zm-.575-.618M31.312 98.012c-.37.258-.976.017-1.35-.52-.37-.538-.37-1.183.01-1.44.373-.258.97-.025 1.35.507.368.545.368 1.19-.01 1.452zm0 0M34.573 101.373c-.33.365-1.036.267-1.552-.23-.527-.487-.674-1.18-.343-1.544.336-.366 1.045-.264 1.564.23.527.486.686 1.18.333 1.543zm0 0M39.073 103.324c-.147.473-.825.688-1.51.486-.683-.207-1.13-.76-.99-1.238.14-.477.823-.7 1.512-.485.683.206 1.13.756.988 1.237zm0 0M44.016 103.685c.017.498-.563.91-1.28.92-.723.017-1.308-.387-1.315-.877 0-.503.568-.91 1.29-.924.717-.013 1.306.387 1.306.88zm0 0M48.614 102.903c.086.485-.413.984-1.126 1.117-.7.13-1.35-.172-1.44-.653-.086-.498.422-.997 1.122-1.126.714-.123 1.354.17 1.444.663zm0 0"
-											/>
-										</g>
-									</svg>
-								</div>
-							</a>
-						</li>
-						</ul>
-					</div>
-				</div>
-				<!-- Project 1: What's the Haps? -->
-				<div class="portfolio__project--project2">
-					<div class="portfolio__details">
-						<h3>Yogi Bingo</h3>
-						<p>A fully responsive game built using Javascript, jQuery and the Datamuse API to randomly generate words related to and associated with Yoga</p>
-						<ul class="portfolio__details--technologies">
-							<li>Javascript</li>
-							<li>jQuery</li>
-							<li>SASS</li>
-						</ul>
-						<ul class="portfolio__details--links">
-							<li>
-								<a href="">
-									<h5>View Live</h5>
+								<a href="https://github.com/karabarley/Event-Meetup">
+									<h5>View Github&nbsp;
+									<i class="fa fa-angle-double-right" aria-hidden="true"></i></h5>
 								</a>
 							</li>
-							<li>
-								<div class="portfolio__details--container">
-									<a href="https://github.com/karabarley/Yogi-Bingo">
-										<!-- Git SVG-->
-										<svg class="portfolio__details--git" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
-											<g fill="#455a64">
-												<path fill-rule="evenodd" clip-rule="evenodd" d="M64 5.103c-33.347 0-60.388 27.035-60.388 60.388 0 26.682 17.303 49.317 41.297 57.303 3.017.56 4.125-1.31 4.125-2.905 0-1.44-.056-6.197-.082-11.243-16.8 3.653-20.345-7.125-20.345-7.125-2.747-6.98-6.705-8.836-6.705-8.836-5.48-3.748.413-3.67.413-3.67 6.063.425 9.257 6.223 9.257 6.223 5.386 9.23 14.127 6.562 17.573 5.02.542-3.903 2.107-6.568 3.834-8.076-13.413-1.525-27.514-6.704-27.514-29.843 0-6.593 2.36-11.98 6.223-16.21-.628-1.52-2.695-7.662.584-15.98 0 0 5.07-1.623 16.61 6.19C53.7 35 58.867 34.327 64 34.304c5.13.023 10.3.694 15.127 2.033 11.526-7.813 16.59-6.19 16.59-6.19 3.287 8.317 1.22 14.46.593 15.98 3.872 4.23 6.215 9.617 6.215 16.21 0 23.194-14.127 28.3-27.574 29.796 2.167 1.874 4.097 5.55 4.097 11.183 0 8.08-.07 14.583-.07 16.572 0 1.607 1.088 3.49 4.148 2.897 23.98-7.994 41.263-30.622 41.263-57.294C124.388 32.14 97.35 5.104 64 5.104z"
-												/>
-												<path d="M26.484 91.806c-.133.3-.605.39-1.035.185-.44-.196-.685-.605-.543-.906.13-.31.603-.395 1.04-.188.44.197.69.61.537.91zm-.743-.55M28.93 94.535c-.287.267-.85.143-1.232-.28-.396-.42-.47-.983-.177-1.254.298-.266.844-.14 1.24.28.394.426.472.984.17 1.255zm-.575-.618M31.312 98.012c-.37.258-.976.017-1.35-.52-.37-.538-.37-1.183.01-1.44.373-.258.97-.025 1.35.507.368.545.368 1.19-.01 1.452zm0 0M34.573 101.373c-.33.365-1.036.267-1.552-.23-.527-.487-.674-1.18-.343-1.544.336-.366 1.045-.264 1.564.23.527.486.686 1.18.333 1.543zm0 0M39.073 103.324c-.147.473-.825.688-1.51.486-.683-.207-1.13-.76-.99-1.238.14-.477.823-.7 1.512-.485.683.206 1.13.756.988 1.237zm0 0M44.016 103.685c.017.498-.563.91-1.28.92-.723.017-1.308-.387-1.315-.877 0-.503.568-.91 1.29-.924.717-.013 1.306.387 1.306.88zm0 0M48.614 102.903c.086.485-.413.984-1.126 1.117-.7.13-1.35-.172-1.44-.653-.086-.498.422-.997 1.122-1.126.714-.123 1.354.17 1.444.663zm0 0"
-												/>
-											</g>
-										</svg>
-										<svg class="portfolio__details--gitColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
-											<g fill="#92b2f2">
-												<path fill-rule="evenodd" clip-rule="evenodd" d="M64 5.103c-33.347 0-60.388 27.035-60.388 60.388 0 26.682 17.303 49.317 41.297 57.303 3.017.56 4.125-1.31 4.125-2.905 0-1.44-.056-6.197-.082-11.243-16.8 3.653-20.345-7.125-20.345-7.125-2.747-6.98-6.705-8.836-6.705-8.836-5.48-3.748.413-3.67.413-3.67 6.063.425 9.257 6.223 9.257 6.223 5.386 9.23 14.127 6.562 17.573 5.02.542-3.903 2.107-6.568 3.834-8.076-13.413-1.525-27.514-6.704-27.514-29.843 0-6.593 2.36-11.98 6.223-16.21-.628-1.52-2.695-7.662.584-15.98 0 0 5.07-1.623 16.61 6.19C53.7 35 58.867 34.327 64 34.304c5.13.023 10.3.694 15.127 2.033 11.526-7.813 16.59-6.19 16.59-6.19 3.287 8.317 1.22 14.46.593 15.98 3.872 4.23 6.215 9.617 6.215 16.21 0 23.194-14.127 28.3-27.574 29.796 2.167 1.874 4.097 5.55 4.097 11.183 0 8.08-.07 14.583-.07 16.572 0 1.607 1.088 3.49 4.148 2.897 23.98-7.994 41.263-30.622 41.263-57.294C124.388 32.14 97.35 5.104 64 5.104z"
-												/>
-												<path d="M26.484 91.806c-.133.3-.605.39-1.035.185-.44-.196-.685-.605-.543-.906.13-.31.603-.395 1.04-.188.44.197.69.61.537.91zm-.743-.55M28.93 94.535c-.287.267-.85.143-1.232-.28-.396-.42-.47-.983-.177-1.254.298-.266.844-.14 1.24.28.394.426.472.984.17 1.255zm-.575-.618M31.312 98.012c-.37.258-.976.017-1.35-.52-.37-.538-.37-1.183.01-1.44.373-.258.97-.025 1.35.507.368.545.368 1.19-.01 1.452zm0 0M34.573 101.373c-.33.365-1.036.267-1.552-.23-.527-.487-.674-1.18-.343-1.544.336-.366 1.045-.264 1.564.23.527.486.686 1.18.333 1.543zm0 0M39.073 103.324c-.147.473-.825.688-1.51.486-.683-.207-1.13-.76-.99-1.238.14-.477.823-.7 1.512-.485.683.206 1.13.756.988 1.237zm0 0M44.016 103.685c.017.498-.563.91-1.28.92-.723.017-1.308-.387-1.315-.877 0-.503.568-.91 1.29-.924.717-.013 1.306.387 1.306.88zm0 0M48.614 102.903c.086.485-.413.984-1.126 1.117-.7.13-1.35-.172-1.44-.653-.086-.498.422-.997 1.122-1.126.714-.123 1.354.17 1.444.663zm0 0"
-												/>
-											</g>
-										</svg>
-									</a>
-								</div>
+							<li class="portfolio__details--live">
+								<a href="./https://what-s-the-haps.firebaseapp.com">
+									<h5> &nbsp;View Live&nbsp;
+										<i class="fa fa-external-link" aria-hidden="true"></i>
+									</h5>
+								</a>
 							</li>
-
 						</ul>
 					</div>
-					<div class="portfolio__device">
-						<fiure>
-							<img src="../../dev/styles/images/apple-mac-yogi.png" alt="Mac desktop with project 1 as background">
-						</fiure>
+				</div>
+				<!-- Project 2: Yogi Bingo -->
+				<div class="portfolio__project--project2">
+					<div class="portfolio__device">								
+							<figure>
+								<img src="public/styles/images/laptop-yogi.jpg" alt="Mac desktop with project 1 as background">
+								<figcaption>
+									<a href="./yogibingo">
+										<i class="fa fa-external-link" aria-hidden="true"></i>
+										<h5>View Live</h5>
+									</a>
+								</figcaption>
+							</figure>
+					</div>
+					<div class="portfolio__details">
+						<h3>Yogi Bingo</h3>
+						<p> A user interactive game built using Javascript, jQuery and the Datamuse API to randomly generate bingo sheets with words related to Yoga</p>
+						<ul class="portfolio__details--technologies">
+							<li>Javascript &nbsp; |</li>
+							<li>jQuery&nbsp; |</li>
+							<li>SASS&nbsp; |</li>
+							<li>
+								<a href="https://github.com/karabarley/Yogi-Bingo">
+									<h5>View Github&nbsp;
+									<i class="fa fa-angle-double-right" aria-hidden="true"></i></h5>
+								</a>
+							</li>
+							<li class="portfolio__details--live">
+								<a href="./yogibingo">
+									<h5> &nbsp;View Live&nbsp;
+										<i class="fa fa-external-link" aria-hidden="true"></i>
+									</h5>
+								</a>
+							</li>
+						</ul>
 					</div>
 				</div>
+				<!-- Project 3: SneakPeek-->
 				<div class="portfolio__project--project3">
 					<div class="portfolio__device">
-						<fiure>
-							<img src="../../dev/styles/images/apple-mac-sneak.png" alt="Mac desktop with project 1 as background">
-						</fiure>
+						<figure>
+							<img src="public/styles/images/laptop-sneak.jpg" alt="Mac desktop with project 1 as background">
+							<figcaption>
+								<a href="./sneakpeek">
+									<i class="fa fa-external-link" aria-hidden="true"></i>
+									<h5>View Live</h5>
+								</a>
+							</figcaption>
+						</figure>
 					</div>
 					<div class="portfolio__details">
 						<h3>Sneak Peek</h3>
-						<p>A fully repsonsive web application built with ReactJS and Firebase to share and keep track of any sneakerhead's Air Jordan sneaker collection	</p>
+						<p>Built with ReactJS and Firebase, this fully responsive web application allows sneakerheads to share and keep track of Air Jordan sneaker collection	</p>
 						<ul class="portfolio__details--technologies">
-							<li>React JS</li>
-							<li>Firebase</li>
-							<li>SASS</li>
-						</ul>
-						<ul class="portfolio__details--links">
+							<li>React JS &nbsp; |</li>
+							<li>Firebase &nbsp; |</li>
+							<li>SASS&nbsp; |	</li>
 							<li>
-									<a href="https://github.com/karabarley/SneakPeek">
-										<h5>View Live</h5>
-									</a>
+								<a href="https://github.com/karabarley/sneakpeek">
+									<h5>View Github &nbsp;
+									<i class="fa fa-angle-double-right" aria-hidden="true"></i></h5>
+								</a>
 							</li>
-							<li>
-								<div class="portfolio__details--container">
-
-									<a href="#">
-										<!-- Git SVG-->
-										<svg class="portfolio__details--git" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
-											<g fill ="#455a64">
-												<path fill-rule="evenodd" clip-rule="evenodd" d="M64 5.103c-33.347 0-60.388 27.035-60.388 60.388 0 26.682 17.303 49.317 41.297 57.303 3.017.56 4.125-1.31 4.125-2.905 0-1.44-.056-6.197-.082-11.243-16.8 3.653-20.345-7.125-20.345-7.125-2.747-6.98-6.705-8.836-6.705-8.836-5.48-3.748.413-3.67.413-3.67 6.063.425 9.257 6.223 9.257 6.223 5.386 9.23 14.127 6.562 17.573 5.02.542-3.903 2.107-6.568 3.834-8.076-13.413-1.525-27.514-6.704-27.514-29.843 0-6.593 2.36-11.98 6.223-16.21-.628-1.52-2.695-7.662.584-15.98 0 0 5.07-1.623 16.61 6.19C53.7 35 58.867 34.327 64 34.304c5.13.023 10.3.694 15.127 2.033 11.526-7.813 16.59-6.19 16.59-6.19 3.287 8.317 1.22 14.46.593 15.98 3.872 4.23 6.215 9.617 6.215 16.21 0 23.194-14.127 28.3-27.574 29.796 2.167 1.874 4.097 5.55 4.097 11.183 0 8.08-.07 14.583-.07 16.572 0 1.607 1.088 3.49 4.148 2.897 23.98-7.994 41.263-30.622 41.263-57.294C124.388 32.14 97.35 5.104 64 5.104z"
-												/>
-												<path d="M26.484 91.806c-.133.3-.605.39-1.035.185-.44-.196-.685-.605-.543-.906.13-.31.603-.395 1.04-.188.44.197.69.61.537.91zm-.743-.55M28.93 94.535c-.287.267-.85.143-1.232-.28-.396-.42-.47-.983-.177-1.254.298-.266.844-.14 1.24.28.394.426.472.984.17 1.255zm-.575-.618M31.312 98.012c-.37.258-.976.017-1.35-.52-.37-.538-.37-1.183.01-1.44.373-.258.97-.025 1.35.507.368.545.368 1.19-.01 1.452zm0 0M34.573 101.373c-.33.365-1.036.267-1.552-.23-.527-.487-.674-1.18-.343-1.544.336-.366 1.045-.264 1.564.23.527.486.686 1.18.333 1.543zm0 0M39.073 103.324c-.147.473-.825.688-1.51.486-.683-.207-1.13-.76-.99-1.238.14-.477.823-.7 1.512-.485.683.206 1.13.756.988 1.237zm0 0M44.016 103.685c.017.498-.563.91-1.28.92-.723.017-1.308-.387-1.315-.877 0-.503.568-.91 1.29-.924.717-.013 1.306.387 1.306.88zm0 0M48.614 102.903c.086.485-.413.984-1.126 1.117-.7.13-1.35-.172-1.44-.653-.086-.498.422-.997 1.122-1.126.714-.123 1.354.17 1.444.663zm0 0"
-												/>
-											</g>
-										</svg>
-										<svg class="portfolio__details--gitColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
-											<g fill="#92b2f2">
-												<path fill-rule="evenodd" clip-rule="evenodd" d="M64 5.103c-33.347 0-60.388 27.035-60.388 60.388 0 26.682 17.303 49.317 41.297 57.303 3.017.56 4.125-1.31 4.125-2.905 0-1.44-.056-6.197-.082-11.243-16.8 3.653-20.345-7.125-20.345-7.125-2.747-6.98-6.705-8.836-6.705-8.836-5.48-3.748.413-3.67.413-3.67 6.063.425 9.257 6.223 9.257 6.223 5.386 9.23 14.127 6.562 17.573 5.02.542-3.903 2.107-6.568 3.834-8.076-13.413-1.525-27.514-6.704-27.514-29.843 0-6.593 2.36-11.98 6.223-16.21-.628-1.52-2.695-7.662.584-15.98 0 0 5.07-1.623 16.61 6.19C53.7 35 58.867 34.327 64 34.304c5.13.023 10.3.694 15.127 2.033 11.526-7.813 16.59-6.19 16.59-6.19 3.287 8.317 1.22 14.46.593 15.98 3.872 4.23 6.215 9.617 6.215 16.21 0 23.194-14.127 28.3-27.574 29.796 2.167 1.874 4.097 5.55 4.097 11.183 0 8.08-.07 14.583-.07 16.572 0 1.607 1.088 3.49 4.148 2.897 23.98-7.994 41.263-30.622 41.263-57.294C124.388 32.14 97.35 5.104 64 5.104z"
-												/>
-												<path d="M26.484 91.806c-.133.3-.605.39-1.035.185-.44-.196-.685-.605-.543-.906.13-.31.603-.395 1.04-.188.44.197.69.61.537.91zm-.743-.55M28.93 94.535c-.287.267-.85.143-1.232-.28-.396-.42-.47-.983-.177-1.254.298-.266.844-.14 1.24.28.394.426.472.984.17 1.255zm-.575-.618M31.312 98.012c-.37.258-.976.017-1.35-.52-.37-.538-.37-1.183.01-1.44.373-.258.97-.025 1.35.507.368.545.368 1.19-.01 1.452zm0 0M34.573 101.373c-.33.365-1.036.267-1.552-.23-.527-.487-.674-1.18-.343-1.544.336-.366 1.045-.264 1.564.23.527.486.686 1.18.333 1.543zm0 0M39.073 103.324c-.147.473-.825.688-1.51.486-.683-.207-1.13-.76-.99-1.238.14-.477.823-.7 1.512-.485.683.206 1.13.756.988 1.237zm0 0M44.016 103.685c.017.498-.563.91-1.28.92-.723.017-1.308-.387-1.315-.877 0-.503.568-.91 1.29-.924.717-.013 1.306.387 1.306.88zm0 0M48.614 102.903c.086.485-.413.984-1.126 1.117-.7.13-1.35-.172-1.44-.653-.086-.498.422-.997 1.122-1.126.714-.123 1.354.17 1.444.663zm0 0"
-												/>
-											</g>
-										</svg>
-									</a>
-								</div>
+							<li class="portfolio__details--live">
+								<a href="./sneakpeek">
+									<h5> &nbsp;View Live&nbsp;<i class="fa fa-external-link" aria-hidden="true"></i></h5>
+								</a>
 							</li>
 						</ul>
 					</div>
 				</div>
+				<!-- Project 4: Trada-->
 				<div class="portfolio__project--project4">
-					<div class="portfolio__details">
-						<h3>HTML to PSD</h3>
-						<p>A fully responsive single page website created from a predesigned PSD mockup</p>
-						<ul class="portfolio__details--technologies">
-							<li>HTML</li>
-							<li>CSS</li>
-							<li>SASS</li>
-						</ul>
-						<ul class="portfolio__details--links">
-							<li>
-								<a href=""><h5>View Live</h5></a>
-							</li>
-							<li>
-								<div class="portfolio__details--container">
-									<a href="https://github.com/karabarley/PSD-to-HTML-Trada">
-										<!-- Git SVG-->
-										<svg class="portfolio__details--git" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
-											<g fill="#455a64">
-												<path fill-rule="evenodd" clip-rule="evenodd" d="M64 5.103c-33.347 0-60.388 27.035-60.388 60.388 0 26.682 17.303 49.317 41.297 57.303 3.017.56 4.125-1.31 4.125-2.905 0-1.44-.056-6.197-.082-11.243-16.8 3.653-20.345-7.125-20.345-7.125-2.747-6.98-6.705-8.836-6.705-8.836-5.48-3.748.413-3.67.413-3.67 6.063.425 9.257 6.223 9.257 6.223 5.386 9.23 14.127 6.562 17.573 5.02.542-3.903 2.107-6.568 3.834-8.076-13.413-1.525-27.514-6.704-27.514-29.843 0-6.593 2.36-11.98 6.223-16.21-.628-1.52-2.695-7.662.584-15.98 0 0 5.07-1.623 16.61 6.19C53.7 35 58.867 34.327 64 34.304c5.13.023 10.3.694 15.127 2.033 11.526-7.813 16.59-6.19 16.59-6.19 3.287 8.317 1.22 14.46.593 15.98 3.872 4.23 6.215 9.617 6.215 16.21 0 23.194-14.127 28.3-27.574 29.796 2.167 1.874 4.097 5.55 4.097 11.183 0 8.08-.07 14.583-.07 16.572 0 1.607 1.088 3.49 4.148 2.897 23.98-7.994 41.263-30.622 41.263-57.294C124.388 32.14 97.35 5.104 64 5.104z"
-												/>
-												<path d="M26.484 91.806c-.133.3-.605.39-1.035.185-.44-.196-.685-.605-.543-.906.13-.31.603-.395 1.04-.188.44.197.69.61.537.91zm-.743-.55M28.93 94.535c-.287.267-.85.143-1.232-.28-.396-.42-.47-.983-.177-1.254.298-.266.844-.14 1.24.28.394.426.472.984.17 1.255zm-.575-.618M31.312 98.012c-.37.258-.976.017-1.35-.52-.37-.538-.37-1.183.01-1.44.373-.258.97-.025 1.35.507.368.545.368 1.19-.01 1.452zm0 0M34.573 101.373c-.33.365-1.036.267-1.552-.23-.527-.487-.674-1.18-.343-1.544.336-.366 1.045-.264 1.564.23.527.486.686 1.18.333 1.543zm0 0M39.073 103.324c-.147.473-.825.688-1.51.486-.683-.207-1.13-.76-.99-1.238.14-.477.823-.7 1.512-.485.683.206 1.13.756.988 1.237zm0 0M44.016 103.685c.017.498-.563.91-1.28.92-.723.017-1.308-.387-1.315-.877 0-.503.568-.91 1.29-.924.717-.013 1.306.387 1.306.88zm0 0M48.614 102.903c.086.485-.413.984-1.126 1.117-.7.13-1.35-.172-1.44-.653-.086-.498.422-.997 1.122-1.126.714-.123 1.354.17 1.444.663zm0 0"
-												/>
-											</g>
-										</svg>
-										<svg class="portfolio__details--gitColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
-											<g fill="#92b2f2">
-												<path fill-rule="evenodd" clip-rule="evenodd" d="M64 5.103c-33.347 0-60.388 27.035-60.388 60.388 0 26.682 17.303 49.317 41.297 57.303 3.017.56 4.125-1.31 4.125-2.905 0-1.44-.056-6.197-.082-11.243-16.8 3.653-20.345-7.125-20.345-7.125-2.747-6.98-6.705-8.836-6.705-8.836-5.48-3.748.413-3.67.413-3.67 6.063.425 9.257 6.223 9.257 6.223 5.386 9.23 14.127 6.562 17.573 5.02.542-3.903 2.107-6.568 3.834-8.076-13.413-1.525-27.514-6.704-27.514-29.843 0-6.593 2.36-11.98 6.223-16.21-.628-1.52-2.695-7.662.584-15.98 0 0 5.07-1.623 16.61 6.19C53.7 35 58.867 34.327 64 34.304c5.13.023 10.3.694 15.127 2.033 11.526-7.813 16.59-6.19 16.59-6.19 3.287 8.317 1.22 14.46.593 15.98 3.872 4.23 6.215 9.617 6.215 16.21 0 23.194-14.127 28.3-27.574 29.796 2.167 1.874 4.097 5.55 4.097 11.183 0 8.08-.07 14.583-.07 16.572 0 1.607 1.088 3.49 4.148 2.897 23.98-7.994 41.263-30.622 41.263-57.294C124.388 32.14 97.35 5.104 64 5.104z"
-												/>
-												<path d="M26.484 91.806c-.133.3-.605.39-1.035.185-.44-.196-.685-.605-.543-.906.13-.31.603-.395 1.04-.188.44.197.69.61.537.91zm-.743-.55M28.93 94.535c-.287.267-.85.143-1.232-.28-.396-.42-.47-.983-.177-1.254.298-.266.844-.14 1.24.28.394.426.472.984.17 1.255zm-.575-.618M31.312 98.012c-.37.258-.976.017-1.35-.52-.37-.538-.37-1.183.01-1.44.373-.258.97-.025 1.35.507.368.545.368 1.19-.01 1.452zm0 0M34.573 101.373c-.33.365-1.036.267-1.552-.23-.527-.487-.674-1.18-.343-1.544.336-.366 1.045-.264 1.564.23.527.486.686 1.18.333 1.543zm0 0M39.073 103.324c-.147.473-.825.688-1.51.486-.683-.207-1.13-.76-.99-1.238.14-.477.823-.7 1.512-.485.683.206 1.13.756.988 1.237zm0 0M44.016 103.685c.017.498-.563.91-1.28.92-.723.017-1.308-.387-1.315-.877 0-.503.568-.91 1.29-.924.717-.013 1.306.387 1.306.88zm0 0M48.614 102.903c.086.485-.413.984-1.126 1.117-.7.13-1.35-.172-1.44-.653-.086-.498.422-.997 1.122-1.126.714-.123 1.354.17 1.444.663zm0 0"
-												/>
-											</g>
-										</svg>
-									</a>
-								</div>
-							</li>
-						</ul>
-					</div>
 					<div class="portfolio__device">
-						<fiure>
-							<img src="../../dev/styles/images/apple-mac-trada2.png" alt="Mac desktop with project 1 as background">
-						</fiure>
+						<figure>
+							<img src="public/styles/images/laptop-trada.jpg" alt="Mac desktop with project 1 as background">
+							<figcaption>
+								<a href="./trada">
+									<i class="fa fa-external-link" aria-hidden="true"></i>
+									<h5>View Live</h5>
+								</a>
+							</figcaption>
+						</figure>
+					</div>
+					<div class="portfolio__details">
+						<h3>PSD to HTML</h3>
+						<p>A pixel-perfect single page responsive website created from a predesigned PSD</p>
+						<ul class="portfolio__details--technologies">
+							<li>HTML &nbsp; |</li>
+							<li>CSS &nbsp; |</li>
+							<li>SASS&nbsp; |</li>
+							<li>
+									<a href="https://github.com/karabarley/PSD-to-HTML-Trada">
+										<h5>View Github&nbsp;
+										<i class="fa fa-angle-double-right" aria-hidden="true"></i></h5>
+									</a>
+								</li>
+								<li class="portfolio__details--live">
+									<a href="./trada">
+										<h5> &nbsp;View Live&nbsp;
+											<i class="fa fa-external-link" aria-hidden="true"></i>
+										</h5>
+									</a>
+								</li>
+						</ul>	
 					</div>
 				</div>
+
 				</div>
 			</section>
 				
@@ -472,10 +437,10 @@
 						<figure class="skills__svg">
 							<img 
 							class="skills__svg--firebase"
-							src="../../dev/styles/images/firebase.png" alt="">
+							src="public/styles/images/firebase.png" alt="">
 							<img 
 							 class="skills__svg--firebaseColor"
-							src="../../dev/styles/images/firebase-color.png" alt="">
+							src="public/styles/images/firebase-color.png" alt="">
 						</figure>
 					</div>
 				</div>
@@ -485,11 +450,11 @@
 		<section id="contact" class="container">
 			<div class="wrapper">
 					<div class="contact__info">
-						<h2>Let's get Social</h2>
+						<h2>Let's Connect</h2>
 						<p>Want to discuss a potenial project or collaboration? Drop me a line anytime and I'll be sure to get back to you within 48 hours!</p>
 	
 						<h4>Email Contact</h4>
-						<p>karabarleta@gmail.com</p>
+						<p>hi@karabarleta.com</p>
 	
 						<h4>Phone Number</h4>
 						<p>416 - 970 - 8538</p>
@@ -518,18 +483,18 @@
 						</ul>
 					</div>
 					<div class="form">
-						<form class="contact__form" action="https://formspree.io/karabarleta@gmail.com" method="POST">
+						<form class="contact__form" action="https://formspree.io/karabarleta@gmail.com" method="POST" autoComplete="off">
 							<label for="name"></label>
-							<input type="text" id="name" name="name" required="true" placeholder="Your Name*">
+							<input type="text" id="name" name="name" required="true" placeholder="Your Name*" >
 		
 							<label for="email-address"></label>
 							<input type="email" id="email-address" name="email-address" required="true" placeholder="Email Address*">
 		
 							<label for="subject"></label>
-							<input type="text" id="subject" name="subject" required="true" placeholder="Subject*">
+							<input type="text" id="subject" name="subject" required="true" placeholder="Subject*" >
 
 							<textarea name="message" cols="30" rows="10" placeholder="Message*"></textarea>
-							<button type="submit">
+							<button type="submit" >
 								<h5>
 									SEND
 								</h5>
@@ -545,20 +510,20 @@
 			<div class="wrapper">
 				<ul class="brand__logos">
 					<li>
-						<img src="../../dev/styles/images/ey-colorLight.png" alt="EY Logo">
+						<img src="public/styles/images/ey-colorLight.png" alt="EY Logo">
 						
 					</li>
 					<li>
-						<img src="../../dev/styles/images/hackeryou-colorLight.png" alt="Hackeryou Logo">
+						<img src="public/styles/images/hackeryou-colorLight.png" alt="Hackeryou Logo">
 					</li>
 					<li>
-						<img src="../../dev/styles/images/rotman-colorLight.png" alt="Rotman Commerce Logo">
+						<img src="public/styles/images/rotman-colorLight.png" alt="Rotman Commerce Logo">
 					</li>
 				</ul>
 
 		</section>
 		<!-- FOOTER -->
-		<footer>
+		<footer class="container">
 			<h4>
 				Copyright © 2017 by Kara Barleta
 			</h4>
@@ -570,6 +535,9 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 	<!-- smooth scroll CDN -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-smooth-scroll/2.1.2/jquery.smooth-scroll.min.js"></script>
+	
+	<!-- particles CDN -->
+	<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
 	<script>
 					$(function () {
 							$('a').smoothScroll();
@@ -577,6 +545,9 @@
 							$('ul.menu a').on('click', function () {
 								$('input[type="checkbox"]').attr('checked', false);
 							});
+						});
+					particlesJS.load('particles-js', 'particles.json', function () {
+							console.log('particles.json loaded...')
 						});
 	</script>
 

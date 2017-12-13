@@ -1,144 +1,159 @@
+
+
 #portfolio{
-  padding: 150px 0px;
-  background: #feffff;
-  color:$textColor;
+  margin:100px 0;
+  .wrapper{
+    @include parent-flex-row;
+    flex-wrap: wrap;
+  }
   h2{
-    text-align: right;
-    margin-top: 0;
+    text-align: center;
+    margin:50px;
+  }
+  h3{
+    color: $textColor;
+    margin: 10px 0px;
+    font-size: 1.5rem;
+  }
+  i{
+    font-size: 50px;
+    margin-bottom: 25px;
+  }
+  
+  figcaption h5{
+    text-transform: capitalize;
+    font-size: 25px;
+  }
+  .portfolio__details{
+    padding: 50px;
+    padding-bottom: 0;
+    p{
+      margin-bottom: 25px;
+
+    }
+  }
+  .portfolio__details--technologies{
+    flex-wrap:wrap;
+   li{
+         margin-bottom:10px;
+         i{
+        font-size:16px;
+        }
+     a{
+       color:$primaryColor;
+     }
+   } 
+  }
+  .portfolio__details--live{
+    display:none;
   }
 }
 
+
 #portfolio{
+  figure{
+    position: relative;
+    background-color: $primaryColor;
+    img{
+      max-width: 100%;
+      display: block;
+      position: relative;
+    }
+    figcaption{
+      position: absolute;
+      top: 30%;
+      left: 0;
+      width: 100%;
+      text-align: center;
+      opacity: 0;
+      color: #fff;
+      z-index: 1;
+        a,
+        a:visited{
+        h5{
+        color: #fff;
+        }
+        i{
+          color: #fff;
+        }
+      }
+    }
+
+  }
+  figure:hover img {
+    opacity: 0.25;
+    transition: all .8s ease;
+  }
+  figure:hover figcaption{
+    opacity: 1;
+    transition: all .8s ease;
+      
+    }
+}
+
+.portfolio__project--project1,
+.portfolio__project--project2,
+.portfolio__project--project3,
+.portfolio__project--project4,
+{
+  transition: all 0.8s; 
+  width: calc(50% - 20px);
+  padding-bottom: 25px;
+  margin-bottom: 50px;
+  position: relative;
+  top:0;
   img{
     max-width:100%;
+    // border-radius: 5px 5px 0 0;
   }
 }
 
-.portfolio__project--project1,
-.portfolio__project--project2,
-.portfolio__project--project3,
-.portfolio__project--project4
+.portfolio__project--project1:hover .portfolio__details h3,
+.portfolio__project--project2:hover .portfolio__details h3,
+.portfolio__project--project3:hover .portfolio__details h3,
+.portfolio__project--project4:hover .portfolio__details h3{
+  color: $primaryColor;
+  transition: all 0.8s; 
+}
+
+
+
+
+
+.portfolio__project--project1:hover,
+.portfolio__project--project2:hover,
+.portfolio__project--project3:hover,
+.portfolio__project--project4:hover,
 {
-  @include parent-flex-row;
-  align-content: space-between;
-  margin-top: 100px;
-  .portfolio__details{
-    h3{
-      margin-top: 10px;
-    }
-    ul.portfolio__details--technologies{
-      margin-top: 25px;
-    }
-    ul.portfolio__details--links{
-    @include parent-flex-row;
-    margin-top: 18px;
-      a{
-        color:$textColor;
-        font-weight: bold;
-        text-transform: uppercase;      
-        padding: 25px;
-      }
-      a:hover{
-        color: $primaryColor;
-      }
-    }
-  }
-}
-
-.portfolio__project--project1,
-.portfolio__project--project2,
-.portfolio__project--project3,
-.portfolio__project--project4{
-  .portfolio__details--links{
-    padding:none;
-    .portfolio__details--gitColor{
-      display:none;
-    }
-    .portfolio__details--container:hover{
-      .portfolio__details--git{
-        display:none;
-      }
-      .portfolio__details--gitColor{
-        display:inline;
-    }
-  }
-}
-}
-
-.portfolio__project--project2,
-.portfolio__project--project4{
-  text-align: right;
-  ul.portfolio__details--links,
-  ul.portfolio__details--technologies{
-    justify-content: flex-end;
-  }
-}
-
-.portfolio__device,
-.portfolio__details{
-  width: 50%;
-  margin-bottom: 5%;
-}
-
-.portfolio__project--project1,
-.portfolio__project--project3{
-  .portfolio__details{
-    padding-left: 4%;
-     ul.portfolio__details--technologies li{
-       margin-right: 20px;
-       margin-left: 0px;
-     }
+  transform: scale(1.05);
+  box-shadow: 2px 5px 25px 0px rgb(240, 239, 239);  
+  h3{
+    color:$primaryColor;
   }
 }
 .portfolio__project--project1,
 .portfolio__project--project3{
-  .portfolio__device{
-    justify-content: center;
-        padding-right: 4%;
-  }
+  margin-right: 10px;
 }
 
 .portfolio__project--project2,
 .portfolio__project--project4{
-  .portfolio__details{
-    padding-right: 4%;
-    ul.portfolio__details--technologies li{
-      margin-left: 20px;
-      margin-right: 0px;
-    }
-  }
-}
-.portfolio__project--project2,
-.portfolio__project--project4{
-  .portfolio__device{
-    justify-content: center;
-        padding-left: 4%;
-  }
-}
-.portfolio__project--project2,
-.portfolio__project--project4{
-  .portfolio__details--links{
-        padding-right: 5%;
-        
-  }
+  margin-left: 10px;
 }
 
-.portfolio__details{
-  p{
-    margin:25px 0px;
-  }
-  ul.portfolio__details--technologies{
-    @include parent-flex-row;
-    align-content: space-between;
-    flex-wrap:wrap;
-  }
-  ul.portfolio__details--technologies li{
-    padding: 20px 0px;
-    width: 100px;
+#portfolio{
+  .portfolio__details--technologies{
+    @include parent-flex-row; 
+    margin-top: 10px;
+    justify-content: flex-start;
     text-align: center;
-    margin-right: 20px;
-    border-radius: 15px;
-    box-shadow: 2px 5px 25px 0px rgb(240, 239, 239); 
-    // border: 1px solid rgb(240, 239, 239);
+    text-transform: uppercase;
+    color: $textColor;
+    font-size: 13px;
+    font-weight: bold; 
+    letter-spacing: 5;
+    li{
+      padding-right:15px;
+    }
   }
 }

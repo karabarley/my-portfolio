@@ -30,7 +30,7 @@ body {
 }
 
 .wrapper{
-	width: 70%;
+	width: 80%;
 	margin: 0 auto;
 	position:relative;
 	left:0%;
@@ -121,6 +121,7 @@ a{
 h1{
 	color: $primaryColor;
 	font-size: 3.75rem;
+	padding-left: 100px;
 }
 
 h2{
@@ -143,4 +144,12 @@ p{
 	font-size: 14px;
 	line-height: 2;
 }
-
+#particles-border{
+	border-radius:50px;
+}
+#particles-js{
+  background: #fff;
+	height:750px;
+	width: 100%;
+	border-radius:50px;
+}

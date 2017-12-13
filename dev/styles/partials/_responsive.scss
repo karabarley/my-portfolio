@@ -20,6 +20,10 @@
     width: 50%; 
     right: -50%; 
   }
+  #home h1{
+  font-size: 3rem;
+  transition:all 0.2s;
+}
 }
 @media (max-width:575px){
   ul#menu{
@@ -45,10 +49,10 @@
         }
       }
     }
-    #home h1{
-      font-size: 3rem;
-      transition:all 0.2s;
-    }
+    // #home h1{
+    //   font-size: 3rem;
+    //   transition:all 0.2s;
+    // }
   header{
     
     .header__nav{
@@ -104,76 +108,17 @@
 }
 // PORTFOLIO
 
-@media (max-width:1100px){
-  .portfolio__project--project1,
-.portfolio__project--project2,
-.portfolio__project--project3,
-.portfolio__project--project4
-{
-  .portfolio__details{
-    .portfolio__details--technologies{
-      li{
-        margin-bottom:12px;
-      }
-    }
-    h3{
-      margin-top: -55px;
-      transition: all 0.2s;
-    }
-  }
-}
-}
-
-@media (max-width:950px){
-
+@media (max-width:900px){
+  #portfolio .wrapper{
+    @include parent-flex-column;
   .portfolio__project--project1,
   .portfolio__project--project2,
   .portfolio__project--project3,
-  .portfolio__project--project4
-  {
-    @include parent-flex-column;
-    .portfolio__device{
-      width: 100%;
-      padding:25px;
-    }
-    .portfolio__details{
-      text-align: center;
-      padding: 25px;
-      padding-top: 0;
-      padding-bottom: 0;
-      width: 100%;
-        h3{
-          margin-top: 25px;
-        }
-        .portfolio__details--links,
-        .portfolio__details--technologies{
-          justify-content: center;
-          padding: 0;
-        }
-    }
+  .portfolio__project--project4{
+    width:100%;
   }
-
-  @media (max-width:605px){
-    #portfolio{
-      .portfolio__project--project1{
-      .portfolio__details{
-        .portfolio__details--links li{
-          display:block;
-        }
-      }
-    }
   }
-
-  .portfolio__project--project1:hover,
-  .portfolio__project--project2:hover,
-  .portfolio__project--project3:hover,
-  .portfolio__project--project4:hover{
-    box-shadow: 2px 5px 25px 0px rgb(240, 239, 239); 
-    border-radius: 10px;
-  }
-
 }
-
 // SKILLS
 @media (max-width:740px){
   #contact .wrapper{
@@ -202,4 +147,29 @@
     }
   }
 }
+@media (max-width:450px){
+#portfolio {
+.portfolio__details{
+  .portfolio__details--live{
+        display:block;
+      }
+
 }
+}
+
+
+  #home h1{
+    padding-left:50px;
+  }
+  #portfolio{
+    
+    .portfolio__project--project1,
+    .portfolio__project--project2,
+    .portfolio__project--project3,
+    .portfolio__project--project4,
+    {
+      box-shadow: 2px 5px 25px 0px rgb(240, 239, 239);  
+  }
+}
+}
+

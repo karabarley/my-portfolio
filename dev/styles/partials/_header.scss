@@ -1,7 +1,14 @@
+
 header{
-  padding-bottom:205px;
-}
-header{
+  // padding-bottom: 200px;
+  #header__intro{
+    position:absolute;
+    bottom:15%;
+    background: rgba(255,255,255,0.8);
+    border-radius:  0 50px  50px 0;
+    margin-right:20%;  
+    padding-bottom:30px;
+  }
   background: $bgColorBase;
   i{
     color:$primaryColor;
@@ -33,13 +40,19 @@ header{
 }
 
 h1{
-  margin-top: 150px;  
-
+  margin-top: 50px;
+  transition: all 0.2s;
 }
 
 .header__button--scroll{
-  margin-top: 35px;
-
+  background:white;
+  margin-top: 50px;
+  margin-left: 100px;
+  z-index:1;
+  transition: all 0.2s; 
+}
+.header__button--scroll:hover{
+  transform: scale(1.1);
 }
 button{
   border: none;
@@ -47,11 +60,12 @@ button{
 }
 
 .header__nav{
-  margin-right: 50px;
+  margin-right: 125px;
   padding-top: 40px;
+  padding-bottom:25px;
 }
 ul.header__social{
-  margin-right: 150px;
+  margin-right: 25%;
   @include parent-flex-row;
   justify-content: flex-end;
   li{
@@ -63,11 +77,10 @@ ul.header__social{
     }
     i:hover{
       color: $primaryColor;
-      transform: scale(1.1)
+      transform: scale(1.1);
     }
   }
 }
 ul#menu__social{
  display: none;
 }
-

@@ -1,0 +1,43 @@
+{
+  "particles":{
+      "number":{
+        "value":50
+    },
+    "color":{
+      "value":"c8d4ec"
+    },
+    "shape":{
+      "type":"circle",
+      "stroke":{
+        "width":1,
+        "color":"#ccc"
+    }
+  },
+    "opacity":{
+      "value":0.5,
+      "random":true,
+      "anim":{
+        "enable":true,
+        "speed":0.5
+      }
+    },
+    "size":{
+      "value":5 
+    },
+    "line_linked":{
+      "enable":true,
+      "distance": 120,
+      "color":"93b3f0"
+    },
+
+    "move":{
+      "speed":0.5
+    },
+    "interactivity":{
+      "events":{
+
+      }
+    }
+
+  }
+  }
