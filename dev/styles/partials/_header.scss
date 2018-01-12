@@ -8,6 +8,24 @@ header{
     border-radius:  0 50px  50px 0;
     margin-right:20%;  
     padding-bottom:30px;
+    #tap{
+     position: absolute;
+     left:350px;
+     bottom:-20%;
+     bottom:7.5%;
+     color:#929292;
+     opacity: 0.1;
+     font-size: 22.5px;
+     text-align: left;
+    }
+  }
+  @media (max-width:575px){
+    #header__intro{
+      #tap{
+        bottom:-12%;
+        left:100px;
+      }
+    }
   }
   background: $bgColorBase;
   i{
@@ -35,7 +53,6 @@ header{
   .menu__button h5{
     font-size: 14px;
     color: white;
-
   }
 }
 

@@ -4,6 +4,9 @@
   background: $bgColorBase;
 }
 
+#message{
+  resize: none;
+}
 #contact .wrapper{
   @include parent-flex-row;
   .contact__info{

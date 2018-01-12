@@ -140,6 +140,19 @@ header {
     border-radius: 0 50px  50px 0;
     margin-right: 20%;
     padding-bottom: 30px; }
+    header #header__intro #tap {
+      position: absolute;
+      left: 350px;
+      bottom: -20%;
+      bottom: 7.5%;
+      color: #929292;
+      opacity: 0.1;
+      font-size: 22.5px;
+      text-align: left; }
+  @media (max-width: 575px) {
+    header #header__intro #tap {
+      bottom: -12%;
+      left: 100px; } }
   header i {
     color: #92b2f2; }
   header h5,
@@ -491,6 +504,9 @@ ul#menu__social {
   color: #455a64;
   background: #feffff; }
 
+#message {
+  resize: none; }
+
 #contact .wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -687,7 +703,13 @@ footer {
     #portfolio .wrapper .portfolio__project--project2,
     #portfolio .wrapper .portfolio__project--project3,
     #portfolio .wrapper .portfolio__project--project4 {
-      width: 100%; } }
+      width: 100%; }
+    #portfolio .wrapper .portfolio__project--project2,
+    #portfolio .wrapper .portfolio__project--project4 {
+      margin-left: 0px; }
+    #portfolio .wrapper .portfolio__project--project1,
+    #portfolio .wrapper .portfolio__project--project3 {
+      margin-right: 0px; } }
 
 @media (max-width: 740px) {
   #contact .wrapper {

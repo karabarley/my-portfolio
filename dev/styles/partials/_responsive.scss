@@ -26,6 +26,7 @@
 }
 }
 @media (max-width:575px){
+
   ul#menu{
     width: 100%; 
     right: -100%; 
@@ -49,10 +50,7 @@
         }
       }
     }
-    // #home h1{
-    //   font-size: 3rem;
-    //   transition:all 0.2s;
-    // }
+
   header{
     
     .header__nav{
@@ -117,7 +115,16 @@
   .portfolio__project--project4{
     width:100%;
   }
+  .portfolio__project--project2, 
+  .portfolio__project--project4 {
+    margin-left: 0px;
+}
+  .portfolio__project--project1, 
+  .portfolio__project--project3 {
+    margin-right: 0px;
+}
   }
+
 }
 // SKILLS
 @media (max-width:740px){
@@ -148,6 +155,7 @@
   }
 }
 @media (max-width:450px){
+
 #portfolio {
 .portfolio__details{
   .portfolio__details--live{
